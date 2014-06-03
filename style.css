@@ -1,9 +1,36 @@
 
-#main {
+body {
+	margin:0;
+	font-family: "Asap", sans-serif;
+}
 
+#header {          
+	background-image: url("http://nanobitwallpaper.com/wp-content/uploads/ocean-waves-wallpaper-tumblr.jpg");    
+	background-size: cover; 
+	font-family: 'Helvetica', sans-serif;
+	height:400px;
+}
+
+#header h1 {
+	text-transform: uppercase;
+	vertical-align: center;
+	text-align: center;
+	font-size: 82px;
+}
+
+h2 {
+	font-family: 'Oswald', sans-serif;
+}
+#header h2 {
+	font-family: 'Asap', sans-serif;
+	font-size: 12px;
+	vertical-align: center;
+	text-align: center;
 }
 
 ul#main-nav {
+	text-align: right;
+	list-style: none;
 
 }
 
@@ -28,5 +55,6 @@ ul#social-links {
 }
 
 #footer {
-
+	margin: 0;
+	float: left;
 }
