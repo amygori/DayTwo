@@ -4,6 +4,17 @@ body {
 	font-family: "Asap", sans-serif;
 }
 
+.main {
+	width: 50%;
+  	float: left;
+
+}
+
+h2 {
+	text-transform: uppercase;
+	font-size: 48px;
+}
+
 #header {          
 	background-image: url("http://nanobitwallpaper.com/wp-content/uploads/ocean-waves-wallpaper-tumblr.jpg");    
 	background-size: cover; 
@@ -28,33 +39,71 @@ h2 {
 	text-align: center;
 }
 
-ul#main-nav {
-	text-align: right;
+#main-nav ul {
+	float: right;
 	list-style: none;
-
+	display: inline;
 }
 
-ul#post-buttons {
+#post-buttons ul{
 
 }
 
 .blockquote {
-
+	margin: 200;
 }
 
 p .byline {
-
 }
 
 #sidebar {
+	width: 25%;
+	float: left;
+}
+
+#sidebar h3 {
+	color: ##20659c;
+	font-size: 18px;
+	text-transform: uppercase;
+}
+
+#sidebar h2 {
+	color: ##20659c;
+	font-size: 36px;
+	text-transform: uppercase;
+}
+
+#social-links ul {
 
 }
 
-ul#social-links {
-
+#post-buttons ul {
+	list-style: none;
 }
 
 #footer {
 	margin: 0;
-	float: left;
+	position: sticky;
+	bottom: 0;
+	background: #152a3e;
+	max-height: 100px;
+
+}
+
+#footer p {
+	color: gray;
+	font-size: 12px;
+}
+
+
+
+.popular-posts img {
+	display: inline-block;
+	height: 300px;
+	width: 25%;
+}
+
+.popular-posts h2 {
+	text-transform: uppercase;
+	font-size: 48px;
 }
