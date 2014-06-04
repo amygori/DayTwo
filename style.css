@@ -1,5 +1,6 @@
 
 body {
+	width: 100%;
 	margin:0;
 	font-family: "Asap", sans-serif;
 }
@@ -81,7 +82,7 @@ p .byline {
 	list-style: none;
 }
 
-#footer {
+footer {
 	margin: 0;
 	position: sticky;
 	bottom: 0;
@@ -90,12 +91,24 @@ p .byline {
 
 }
 
-#footer p {
+footer li {
+	display: inline;
+	color: lightslategray;
+	font-size: 12px;
+	float: right;
+
+}
+
+.footer p {
 	color: gray;
 	font-size: 12px;
 }
 
 
+.popular-posts {
+	float: clear;
+
+}
 
 .popular-posts img {
 	display: inline-block;
