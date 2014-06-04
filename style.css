@@ -12,39 +12,45 @@ body {
 
 }
 
-h2 {
-	text-transform: uppercase;
-	font-size: 48px;
-}
 
-#header {          
+header {          
 	background-image: url("http://nanobitwallpaper.com/wp-content/uploads/ocean-waves-wallpaper-tumblr.jpg");    
 	background-size: cover; 
 	font-family: 'Helvetica', sans-serif;
 	height:400px;
 }
 
-#header h1 {
+header h1 {
 	text-transform: uppercase;
-	vertical-align: center;
-	text-align: center;
+	width: 100%;
 	font-size: 82px;
+	padding: 160px 0;
+	margin: 0 auto;
+	text-align: center;
 }
 
-h2 {
-	font-family: 'Oswald', sans-serif;
-}
-#header h2 {
+
+header p {
 	font-family: 'Asap', sans-serif;
 	font-size: 12px;
-	vertical-align: center;
-	text-align: center;
+	width:100%; 
+	position: relative;
+	text-align: center; 
+}
+header nav a {
+	float: right;
+	text-decoration: none;
+	padding: 10px;
+	font-family: Oswald;
+	text-transform: uppercase;
+	color: black;
 }
 
-#main-nav ul {
-	float: right;
-	list-style: none;
-	display: inline;
+h2.main {
+	font-family: 'Oswald', sans-serif;
+	text-transform: uppercase;
+	font-size: 48px;
+	margin: 50px 0 20px 0;
 }
 
 #post-buttons ul{
@@ -74,13 +80,13 @@ span.blue {
 	font-weight: bold;
 }
 
-#sidebar {
+aside {
 	width: 300px;
 	float: right;
 	margin: 0 150 0 0;
 }
 
-#sidebar h3 {
+aside h3 {
 	color: #20659c;
 	font-size: 18px;
 	text-transform: uppercase;
@@ -88,18 +94,18 @@ span.blue {
 }
 
 
-#sidebar h2 {
+aside h2 {
 	color: #20659c;
 	font-size: 16px;
 	text-transform: uppercase;
 	line-height: 24px;
 }
 
-#sidebar p {
+aside p {
 	color: gray;	
 }
 
-img.sidebar {
+aside img {
 	height: 300px;	
 	width: auto;
 }
@@ -141,13 +147,12 @@ ul#post-buttons  {
 
 footer {
 	margin: 0;
-	position: sticky;
 	bottom: 0;
 	background: #152a3e;
 	height: 100px;
 	color: lightslategray;
-	vertical-align: center;
 	font-size: 13px;
+	clear: both;
 
 }
 
@@ -160,7 +165,7 @@ footer {
 
 }
 ul.footer {
-	position: relative;
+
 }
 
 .footer p {
@@ -174,21 +179,21 @@ ul.footer {
  	padding: 20 10 20 150;
  }
 
-.popular-posts {
-	float: none;
-	display: inline-block;
+#popular-posts {
+	
 
 }
 
-.popular-posts img {
-	display: inline-block;
+#popular-posts img {
+
 	height: 360px;
 	width: 250px;
+	clear: both;
 }
 
-h2.popular-posts {
+h2#popular-posts {
 	text-transform: uppercase;
 	font-size: 48px;
-	float: left;
+	clear:both;
 	padding: 150 px;
 }
