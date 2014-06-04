@@ -6,7 +6,8 @@ body {
 }
 
 .main {
-	width: 50%;
+	width: 550px;
+	margin: 0 0 0 150px;
   	float: left;
 
 }
@@ -50,36 +51,92 @@ h2 {
 
 }
 
-.blockquote {
-	margin: 200;
+.block-quote {
+	margin: 200px;
+	border-left: solid 2px gray;
+	color: #20659c;
+	text-transform: uppercase;
+	display: inline;	
+	font-size: 24px;
+	margin: 0;
+	padding: 10px;
 }
 
-p .byline {
+p#byline {
+	color: gray;
+	display: inline;
+	font-size: 12px;
+	line-height: 
+}
+
+span.blue {
+	color: #20659c;
+	font-weight: bold;
 }
 
 #sidebar {
-	width: 25%;
-	float: left;
+	width: 300px;
+	float: right;
+	margin: 0 150 0 0;
 }
 
 #sidebar h3 {
-	color: ##20659c;
+	color: #20659c;
 	font-size: 18px;
 	text-transform: uppercase;
+	margin: 0;
 }
+
 
 #sidebar h2 {
-	color: ##20659c;
-	font-size: 36px;
+	color: #20659c;
+	font-size: 16px;
 	text-transform: uppercase;
+	line-height: 24px;
 }
 
-#social-links ul {
+#sidebar p {
+	color: gray;	
+}
+
+img.sidebar {
+	height: 300px;	
+	width: auto;
+}
+
+img#authorpic {
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	margin: 50px;
+}
+
+img#tinyauthorpic {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	padding: 10 px;
+}
+
+ul#social-links {
+	list-style-type: none;
+	display: inline;
+}
+
+#social-links li a {
+	color: gray;
+	display: inline-block;
+	float: left;
+	padding: 5px;
+	line-height: 24px;
+	font-size: 14px;
 
 }
 
-#post-buttons ul {
-	list-style: none;
+ul#post-buttons  {
+	display: inline-flex;
+	list-style-type: none;
+	color: gray;
 }
 
 footer {
@@ -87,36 +144,51 @@ footer {
 	position: sticky;
 	bottom: 0;
 	background: #152a3e;
-	max-height: 100px;
+	height: 100px;
+	color: lightslategray;
+	vertical-align: center;
+	font-size: 13px;
 
 }
 
-footer li {
+.footer li {
 	display: inline;
-	color: lightslategray;
-	font-size: 12px;
+	vertical-align: center;
+	font-size: 13px;
 	float: right;
+	text-align: right;
 
+}
+ul.footer {
+	position: relative;
 }
 
 .footer p {
 	color: gray;
 	font-size: 12px;
+	position: relative;
 }
-
+ img.footer  {
+ 	height: 50px;
+ 	margin: 150 px;
+ 	padding: 20 10 20 150;
+ }
 
 .popular-posts {
-	float: clear;
+	float: none;
+	display: inline-block;
 
 }
 
 .popular-posts img {
 	display: inline-block;
-	height: 300px;
-	width: 25%;
+	height: 360px;
+	width: 250px;
 }
 
-.popular-posts h2 {
+h2.popular-posts {
 	text-transform: uppercase;
 	font-size: 48px;
+	float: left;
+	padding: 150 px;
 }
