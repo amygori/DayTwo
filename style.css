@@ -5,6 +5,10 @@ body {
 	font-family: "Asap", sans-serif;
 }
 
+.blue-filter {
+	background: rgb(36, 105, 159, 0.8)
+}
+
 .main {
 	width: 550px;
 	margin: 0 0 0 150px;
@@ -16,21 +20,27 @@ body {
 header {          
 	background-image: url("http://nanobitwallpaper.com/wp-content/uploads/ocean-waves-wallpaper-tumblr.jpg");    
 	background-size: cover; 
-	font-family: 'Helvetica', sans-serif;
+	font-family: 'Nunito', sans-serif;
 	height:400px;
 }
 
-a#home {
+a.home {
 	font-family: Asap;
 	text-transform: uppercase;
 	float:left;
 }
 
+ img.home {
+	vertical-align: middle;
+	padding-right: 15px;
+}
+
+
 header h1 {
 	text-transform: uppercase;
 	width: 100%;
-	font-size: 82px;
-	padding: 160px 0;
+	font-size: 80px;
+	padding: 160px 0 0 0;
 	margin: 0 auto;
 	text-align: center;
 }
@@ -60,6 +70,7 @@ h2.main {
 
 p.text {
 	padding: 20px 0;
+	text-align: justify;
 }
 
 .block-quote {
@@ -94,23 +105,34 @@ aside h3 {
 	font-size: 18px;
 	text-transform: uppercase;
 	margin: 0;
+	text-align: center;
 }
 
-
 aside h2 {
+	font-family: "Oswald", sans-serif;
 	color: #20659c;
 	font-size: 16px;
 	text-transform: uppercase;
 	line-height: 24px;
+	padding: 30px 0 20px 0;
+	text-align: left;
 }
 
 aside p {
-	color: gray;	
+	color: gray;
+	text-align: justify;	
+}
+
+aside a {
+	text-decoration: none;
+	font-family: "Asap", sans-serif;
+	font-size: 10px;
+	float: right;
 }
 
 aside img {
-	height: 300px;	
-	width: auto;
+	height: 200px;
+	width: 250px;
 }
 
 img#authorpic {
@@ -118,6 +140,7 @@ img#authorpic {
 	height: 80px;
 	border-radius: 50%;
 	margin: 50px;
+	display: inline;
 }
 
 img#tinyauthorpic {
@@ -130,16 +153,19 @@ img#tinyauthorpic {
 
 ul#social-links {
 	list-style-type: none;
-	display: inline;
+	margin: 0 0 0 30px;
 }
 
 #social-links li a {
 	color: gray;
 	display: inline-block;
 	float: left;
-	padding: 5px;
 	line-height: 24px;
-	font-size: 14px;
+	font-size: 12px;
+	padding: 2px 10px 25px 0;
+	margin: 0;
+	position: relative;
+	text-decoration: none;
 
 }
 
@@ -164,7 +190,7 @@ footer#bottom {
 	margin: 0;
 	bottom: 0;
 	background: #152a3e;
-	height: 100px;
+	height: 80px;
 	color: lightslategray;
 	font-size: 13px;
 	clear: both;
@@ -180,7 +206,9 @@ footer#bottom {
 
 }
 ul.footer {
-
+	float: right;
+	padding: 20px;
+	margin-right: 30px;
 }
 
 .footer p {
@@ -191,12 +219,15 @@ ul.footer {
 
 p.footer {
 	float: left;
+	vertical-align: middle;
+	padding: 20px;
 }
 
  img.footer  {
  	height: 50px;
  	margin: 150 px;
  	padding: 20 10 20 150;
+ 	float: left;
  }
 
 #popular-posts {
