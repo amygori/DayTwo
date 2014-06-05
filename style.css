@@ -36,7 +36,7 @@ header h1 {
 }
 
 
-header p {
+header h2 {
 	font-family: 'Asap', sans-serif;
 	font-size: 12px;
 	width:100%; 
@@ -58,8 +58,8 @@ h2.main {
 	margin: 50px 0 20px 0;
 }
 
-#post-buttons ul{
-
+p.text {
+	padding: 20px 0;
 }
 
 .block-quote {
@@ -76,7 +76,6 @@ p#byline {
 	color: gray;
 	display: inline;
 	font-size: 12px;
-	line-height: 
 }
 
 span.blue {
@@ -84,10 +83,10 @@ span.blue {
 	font-weight: bold;
 }
 
-aside {
-	width: 300px;
+aside.wrapper {
+	width: 25%;
 	float: right;
-	margin: 0 150 0 0;
+	padding-right: 50px;
 }
 
 aside h3 {
@@ -125,7 +124,8 @@ img#tinyauthorpic {
 	width: 40px;
 	height: 40px;
 	border-radius: 50%;
-	padding: 10 px;
+	vertical-align: middle;
+
 }
 
 ul#social-links {
@@ -188,21 +188,24 @@ ul.footer {
 	font-size: 12px;
 	position: relative;
 }
+
+p.footer {
+	float: left;
+}
+
  img.footer  {
  	height: 50px;
  	margin: 150 px;
  	padding: 20 10 20 150;
  }
 
-footer#popular-posts {
+#popular-posts {
 	display: inline-block;
 	height: 200px;
-
-
+	width: 100%;
 }
 
 #popular-posts img {
-
 	height: 360px;
 	width: 250px;
 	clear: both;
@@ -217,4 +220,29 @@ h2.popular-posts {
 	font-family: Oswald;
 	padding: 25px 0;
 	text-align: center;
+}
+
+.bottom-wrapper {
+	width: 100%;
+	background-size: cover;
+	height:200px;
+	font-family: Oswald;
+	text-transform: uppercase;
+	text-align: baseline;
+}
+
+li#one {
+	background-image: url(Images/surfboards.jpg);
+}
+
+li#two {
+	background-image: url(Images/leaping-dolphins.jpg);
+}
+
+li#three {
+	background-image: url(Images/kayak.jpg);
+}
+
+li#four {
+	background-image: url(Images/surf-dog.jpg);
 }
