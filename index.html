@@ -15,7 +15,7 @@
 	  <body>
 	  	
 <!-- HEADER -->
-	  	<header class="blue-filter">
+	  	<header>
 	  		<nav>
 	  			<a class="home" href="*home"><img class="home" src="Images/WaveLogo.png">Surf and Paddle Co. Blog</a>
  		  		<a href="*">Search <i class="fa fa-search"></i></a>
@@ -31,7 +31,7 @@
 	  		
 	 			<h2 class="main">A Fantastic Engaging Headline Goes Here</h2>
 	 				<article>
-	 					<img id="tinyauthorpic" src="Images/happy-dolphin.jpg" alt="Annie Dolphin">
+	 					<img id="tinyauthorpic" class="blue-filter" src="Images/happy-dolphin.jpg" alt="Annie Dolphin">
 		 				
 		 				<p id="byline"><span class="blue">Annie Dolphin</span> on <time datetime="2014-06-07">Monday June 7 9:22 pm</time></p>
 		 				
@@ -44,57 +44,61 @@
 
 <!-- BUTTONS -->
 
-	 			<ul class="post-buttons">
-			 		<li class="post-buttons">
+	 			<ul class="buttons">
+			 		<li class="buttons">
 			 			<i class="fa fa-comment"></i> Read Comments</li>
-			 		<li class="post-buttons">
+			 		<li class="buttons">
 			 			<i class="fa fa-cloud-upload"></i> Read Later</li>
-			 		<li class="post-buttons">
+			 		<li class="buttons">
 			 			<i class="fa fa-share-square-o"></i> Share This Post</li>
 	 			</ul>
 		
 	 </section>
 
 <!-- SIDEBAR -->
-	 <aside class="wrapper">
+	 <aside>
 	 	<img id="authorpic" src="Images/happy-dolphin.jpg" alt="Annie Dolphin">
 	 	<h3>Annie Dolphin</h3>
-	 		<ul id="social-links">
-	 			<li><a href="http://www.twitter.com">Twitter</a></li>
-	 			<li><a href="http://www.facebook.com">Facebook</a></li>
-		 		<li><a href="http://www.instagram.com">Instagram</a></li>
-	 		</ul>
-	 	<img class="sidebar" class="blue-filter" src="Images/kayaks.jpg">
+	 		<nav id="social-links">
+	 			<a href="twitter.com">Twitter</a>
+	 			<a href="facebook.com">Facebook</a>
+		 		<a href="instagram.com">Instagram</a>
+	 		</nav>
+	 	<img class="blue-filter sidebar" src="Images/kayaks.jpg">
 	 		<p><a href="aboutart.com">About This Art</a></p>
 	 	<h2>Sidebar Section Heading</h2>
 	 		<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.  </p>
 	 </aside>
 
-<!-- FIRST FOOTER-->
-	<footer id="popular-posts">
-		<h2 class="popular-posts">Most Popular Posts</h2>		
-	 		<span class="bottom-wrapper">
-	 			
+<!-- SECTION: Popular Posts -->
+	<section>		
+
+		<h2>Most Popular Posts</h2>		
+	 		
+	 		<div id="posts">	
 	 			<ul>
-		 			<li id="one">Another Cool Post</li>
-		 			<li id="two">Post Title</li>
-		 			<li id="three">Here's Another Longer Post Title</li>
-		 			<li id="four">Oh Cool a Post!</li>
+		 			<li><img src="Images/surf-dog.jpg">Another Cool Post</li>
+		 			<li><img src="Images/kayak.jpg">Post Title</li>
+		 			<li><img src="Images/leaping-dolphins.jpg">Here's Another Longer Post Title</li>
+		 			<li><img src="Images/surfboards.jpg">Oh Cool a Post!</li>
 	 			</ul>
- 			</span>
-	</footer>
+ 			</div>
+	</section>
 
 
-<!-- SECOND FOOTER -->
-	<footer id="bottom">
-		<img class="footer" src="http://theironyard.com/images/logo.footer.png" alt="The Iron Yard Logo">
-		<p class="footer">The Ironyard Copyright 2014, All Rights Reserved</p>
-		<ul class="footer">
+<!-- BOTTOM FOOTER -->
+	<footer>
+		<img src="http://theironyard.com/images/logo.footer.png" alt="The Iron Yard Logo">
+		
+		<p>The Ironyard Copyright 2014, All Rights Reserved</p>
+		
+		<ul>
 			<li>Nav Item 4 </li>
 			<li>Nav Item 3 | </li>
 			<li>Nav Item 2 | </li>
 			<li>Nav Item 1 | </li>
 		</ul>
+	
 	</footer>
 
 	 </body>

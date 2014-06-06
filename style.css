@@ -1,3 +1,4 @@
+ /* Global Styles */
 
 body {
 	width: 100%;
@@ -6,20 +7,12 @@ body {
 }
 
 .blue-filter {
-	background: rgb(36, 105, 159, 0.8)
+	background: linear-gradient(rgba(36, 105, 159, 0.8), rgba(36, 105, 159, 0.8));
 }
 
-.main {
-	width: 550px;
-	margin: 0 0 0 150px;
-  	float: left;
-
-}
-
-
+/* Header */
 header {          
-	background-image: url("http://nanobitwallpaper.com/wp-content/uploads/ocean-waves-wallpaper-tumblr.jpg");    
-	background-size: cover; 
+	background: linear-gradient(rgba(36, 105, 159, 0.8), rgba(36, 105, 159, 0.8)), url("Images/surf_banner.jpg");background-size: cover; 
 	font-family: 'Nunito', sans-serif;
 	height:400px;
 }
@@ -30,21 +23,20 @@ a.home {
 	float:left;
 }
 
- img.home {
+img.home {
 	vertical-align: middle;
 	padding-right: 15px;
 }
-
 
 header h1 {
 	text-transform: uppercase;
 	width: 100%;
 	font-size: 80px;
+	color: white;
 	padding: 160px 0 0 0;
 	margin: 0 auto;
 	text-align: center;
 }
-
 
 header h2 {
 	font-family: 'Asap', sans-serif;
@@ -52,6 +44,7 @@ header h2 {
 	width:100%; 
 	text-align: center; 
 }
+
 header nav a {
 	float: right;
 	text-decoration: none;
@@ -61,11 +54,20 @@ header nav a {
 	color: black;
 }
 
+/* Main */
+.main {
+	width: 550px;
+	margin: 0 0 0 150px;
+  	float: left;
+}
+
 h2.main {
 	font-family: 'Oswald', sans-serif;
 	text-transform: uppercase;
 	font-size: 48px;
 	margin: 50px 0 20px 0;
+	text-align: left;
+	color: #142a3e;
 }
 
 p.text {
@@ -89,23 +91,41 @@ p#byline {
 	font-size: 12px;
 }
 
+img#tinyauthorpic {
+	width: 40px;
+	height: 40px;#142a3e
+	border-radius: 50%;
+	border-radius: 50%;
+	vertical-align: middle;
+}
+
+ul.buttons  {
+	display: inline-flex;
+	list-style-type: none;
+	color: gray;
+	padding: 20px;
+}
+
+li.buttons {
+	padding: 10px 10px;
+	border: solid 3px white;
+	margin: 0;
+	background: gray;
+	color: white;
+	font-size: 13px;
+
+}
+
 span.blue {
 	color: #20659c;
 	font-weight: bold;
 }
 
-aside.wrapper {
-	width: 25%;
+/* Sidebar */
+aside {
+	width: 250px;
 	float: right;
-	padding-right: 50px;
-}
-
-aside h3 {
-	color: #20659c;
-	font-size: 18px;
-	text-transform: uppercase;
-	margin: 0;
-	text-align: center;
+	margin-right: 150px;
 }
 
 aside h2 {
@@ -113,26 +133,29 @@ aside h2 {
 	color: #20659c;
 	font-size: 16px;
 	text-transform: uppercase;
-	line-height: 24px;
-	padding: 30px 0 20px 0;
-	text-align: left;
+}
+
+aside h3 {
+	color: #20659c;
+	font-size: 18px;
+	text-transform: uppercase;
 }
 
 aside p {
 	color: gray;
-	text-align: justify;	
+	text-align: left;	
 }
 
 aside a {
 	text-decoration: none;
 	font-family: "Asap", sans-serif;
 	font-size: 10px;
-	float: right;
 }
 
 aside img {
 	height: 200px;
 	width: 250px;
+	background: linear-gradient(rgba(36, 105, 159, 0.8), rgba(36, 105, 159, 0.8))
 }
 
 img#authorpic {
@@ -143,106 +166,18 @@ img#authorpic {
 	display: inline;
 }
 
-img#tinyauthorpic {
-	width: 40px;
-	height: 40px;
-	border-radius: 50%;
-	vertical-align: middle;
+nav#social-links {
 
 }
 
-ul#social-links {
-	list-style-type: none;
-	margin: 0 0 0 30px;
-}
-
-#social-links li a {
+#social-links a {
 	color: gray;
-	display: inline-block;
-	float: left;
-	line-height: 24px;
 	font-size: 12px;
-	padding: 2px 10px 25px 0;
-	margin: 0;
-	position: relative;
 	text-decoration: none;
-
 }
 
-ul.post-buttons  {
-	display: inline-flex;
-	list-style-type: none;
-	color: gray;
-	padding: 20px;
-}
-
-li.post-buttons {
-	padding: 10px 10px;
-	border: solid 3px white;
-	margin: 0;
-	background: gray;
-	color: white;
-	font-size: 13px;
-
-}
-
-footer#bottom {
-	margin: 0;
-	bottom: 0;
-	background: #152a3e;
-	height: 80px;
-	color: lightslategray;
-	font-size: 13px;
-	clear: both;
-
-}
-
-.footer li {
-	display: inline;
-	vertical-align: center;
-	font-size: 13px;
-	float: right;
-	text-align: right;
-
-}
-ul.footer {
-	float: right;
-	padding: 20px;
-	margin-right: 30px;
-}
-
-.footer p {
-	color: gray;
-	font-size: 12px;
-	position: relative;
-}
-
-p.footer {
-	float: left;
-	vertical-align: middle;
-	padding: 20px;
-}
-
- img.footer  {
- 	height: 50px;
- 	margin: 150 px;
- 	padding: 20 10 20 150;
- 	float: left;
- }
-
-#popular-posts {
-	display: inline-block;
-	height: 200px;
-	width: 100%;
-}
-
-#popular-posts img {
-	height: 360px;
-	width: 250px;
-	clear: both;
-}
-
-h2.popular-posts {
+/* Section: Popular Posts */
+section h2 {
 	text-transform: uppercase;
 	font-size: 48px;
 	clear:both;
@@ -251,29 +186,66 @@ h2.popular-posts {
 	font-family: Oswald;
 	padding: 25px 0;
 	text-align: center;
+	color: #142a3e;
 }
 
-.bottom-wrapper {
+section {
 	width: 100%;
-	background-size: cover;
-	height:200px;
+	display: inline-block;
+}
+
+section img {
+	height: 250px;
+	width: 25%;
+}
+section li {
 	font-family: Oswald;
 	text-transform: uppercase;
-	text-align: baseline;
+	text-align: bottom;
+ }
+
+ #posts li 
+
+/* Bottom Footer*/
+
+footer {
+	margin: 0;
+	bottom: 0;
+	background: #152a3e;
+	height: 80px;
+	color: lightslategray;
+	font-size: 13px;
+	clear: both;
 }
 
-li#one {
-	background-image: url(Images/surfboards.jpg);
+footer li {
+	display: inline;
+	vertical-align: center;
+	font-size: 13px;
+	float: right;
+	text-align: right;
+
+}
+footer ul {
+	float: right;
+	padding: 20px;
+	margin-right: 30px;
 }
 
-li#two {
-	background-image: url(Images/leaping-dolphins.jpg);
+footer p {
+	color: gray;
+	font-size: 12px;
+	float: left;
+	vertical-align: middle;
+	padding: 20px;
 }
 
-li#three {
-	background-image: url(Images/kayak.jpg);
-}
+ footer img {
+ 	height: 50px;
+ 	margin: 150 px;
+ 	padding: 20 10 20 150;
+ 	float: left;
+ 	vertical-align: middle;
+ }
 
-li#four {
-	background-image: url(Images/surf-dog.jpg);
-}
+	
