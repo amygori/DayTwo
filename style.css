@@ -7,6 +7,7 @@ body {
 	font-size: 14px;
 }
 
+
 div.blue-filter div {
 	background-color: #24699f;
 	opacity: 0.5;
@@ -17,7 +18,13 @@ header {
 	background: linear-gradient(rgba(36, 105, 159, 0.8), rgba(36, 105, 159, 0.8)), url("Images/surf_banner.jpg");
 	background-size: cover;
 	font-family: 'PT Sans', sans-serif;
-	height:400px;
+	height:380px;
+}
+
+@media (max-width: 320px) {
+	header {
+		height: 150px;
+		}
 }
 
 header h1 {
@@ -30,12 +37,21 @@ header h1 {
 	text-align: center;
 }
 
+@media (max-width: 320px) {
+	header h1 {
+		font-size: 24px;
+		padding: 10px 0;
+	}
+}
+
+
 header h2 {
 	font-family: 'Asap', sans-serif;
-	font-size: 12px;
+	font-size: 11px;
 	width:100%; 
 	text-align: center; 
 }
+
 
 header nav {
 	float: right;
@@ -44,6 +60,13 @@ header nav {
 	font-family: 'Oswald', sans-serif;
 	text-transform: uppercase;
 	color: black;
+}
+
+@media (max-width: 320px) {
+	header nav {
+		float: none;
+		text-align: center;
+	}
 }
 
 header a {
@@ -55,22 +78,45 @@ header a {
 a.home {
 	font-family: 'PT Sans', sans-serif;
 	text-transform: uppercase;
-	float: left;
-	padding: 10px 0 0 100px;
+	padding: 0 10px;
+	position: relative;
+	top: 20px;
+}
+
+
+
+@media (max-width: 320px) {
+	 a.home {
+		display: none;
+	}
 }
 
 img.home {
-	vertical-align: middle;
-	padding-right: 15px;
+	padding: 10px 0 0 100px;
+	height: 30px;
+	float: left;
+	clear: left;
 }
 
-
+@media (max-width: 320px) {
+	img#logo.home {
+		float: none;
+		padding: 25px 10px 0 60px;
+	}
+}
 /* Main */
 .main {
 	width: 45%;
 	margin: 0 0 0 100px;
   	float: left;
 }
+ @media (max-width: 320px) {
+ 	.main {
+ 		width: 100%;
+ 		margin: 20px;
+ 		float: none;
+ 	}
+ }
 
 h2.main {
 	font-family: 'Oswald', sans-serif;
@@ -83,6 +129,11 @@ h2.main {
 	padding-top: 50px;
 }
 
+@media (max-width: 320px) {
+ 	h2.main {
+ 		font-size: 54px;
+ }
+}
 article {
 	clear: both;
 }
@@ -122,6 +173,12 @@ img#tinyauthorpic {
 	vertical-align: middle;
 }
 
+@media (max-width: 320px) {
+	img#tinyauthorpic{
+		display: none;
+	}
+}
+
 div#buttons {
 	clear: both;
 	padding-top: 20px;
@@ -141,6 +198,12 @@ a.buttons {
 	padding: 5px 5px 5px 0px;
 }
 
+@media (max-width: 320px) {
+	a.buttons {
+		display: none;
+	}
+}
+
 a.buttons:hover {
 	background-color: #20659d;
 }
@@ -148,6 +211,12 @@ a.buttons:hover {
 .buttons i {
 	background-color: #596265;
 	padding: 5px 5px;
+}
+
+@media (max-width: 320px) {
+	.buttons i {
+		display: inline;
+	}
 }
 
 a.buttons:hover > i {
@@ -161,6 +230,14 @@ aside {
 	float: right;
 	margin-right: 100px;
 	color: gray;
+}
+
+@media (max-width: 320px) {
+	aside {
+		width: 100%;
+		float: none;
+		margin: 50px;
+	}
 }
 
 #author {
@@ -252,13 +329,19 @@ section h2 {
  	overflow: hidden;
 }
 
-
-
 #posts div {
 	width: 25%;
 	float: left;
 	opacity: 0.5;
 	overflow:hidden;
+}
+
+@media (max-width: 320px) {
+	#posts div {
+		float: none;
+		width: 100%;
+		display: inline-block;
+	}
 }
 
 #posts a {
@@ -270,12 +353,12 @@ section h2 {
 	margin-top: 250px;
 	}
 
- #posts div a:hover {
+#posts div a:hover {
  	opacity: 1;
  	color: white;
  }
 
- #posts div a:hover > div {
+#posts div a:hover > div {
  	opactity: 1;
  }
 
@@ -295,6 +378,25 @@ footer {
 	clear: both;
 }
 
+@media (max-width: 320px) {
+	footer {
+		height: auto;
+	}
+}
+
+footer ul {
+	float: right;
+	padding: 36px;
+	margin-right: 50px;
+	color: gray;
+}
+
+@media (max-width: 320px) {
+	footer ul {
+		float: none;
+	}
+}
+
 footer li {
 	display: inline;
 	font-size: 11px;
@@ -304,10 +406,10 @@ footer li {
 	border-left: solid 1px gray;
 }
 
-footer ul {
-	float: right;
-	padding: 36px;
-	margin-right: 50px;
+@media (max-width: 320px) {
+	footer li {
+		float: none;
+	}
 }
 
 footer li:last-child {
@@ -331,4 +433,10 @@ footer p {
 	padding-left: 50px;
  }
 
+@media (max-width: 320px) {
+	footer img {
+		float: none;
+		margin: 50px;
+	}
+}
 	
