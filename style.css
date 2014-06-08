@@ -112,7 +112,7 @@ img.home {
 }
  @media (max-width: 320px) {
  	.main {
- 		width: 100%;
+ 		width: 80%;
  		margin: 20px;
  		float: none;
  	}
@@ -132,15 +132,22 @@ h2.main {
 @media (max-width: 320px) {
  	h2.main {
  		font-size: 54px;
+ 		margin: 15px;
  }
 }
 article {
 	clear: both;
 }
 
+@media (max-width: 320 px) {
+	article {
+		margin: 10px;
+	}
+}
+
 p.text {
 	padding: 20px 0 0 0;
-	text-align: justify;
+	text-align: left;
 	line-height: 20px;
 	font-size: 13px;
 }
@@ -234,14 +241,15 @@ aside {
 
 @media (max-width: 320px) {
 	aside {
-		width: 100%;
+		width: 80%;
 		float: none;
-		margin: 50px;
+		margin: 45px;
 	}
 }
 
 #author {
 	width: 100%;
+	margin: auto;
 }
 
 aside h2 {
@@ -249,7 +257,7 @@ aside h2 {
 	color: #20659c;
 	font-size: 16px;
 	text-transform: uppercase;
-	padding: 25px 0 10px 0;
+	padding: 25px 0 10px 20px;
 }
 
 aside h3 {
@@ -257,7 +265,15 @@ aside h3 {
 	font-size: 11px;
 	text-transform: uppercase;
 	text-align: center;
+	width: 100%
 }
+
+@media (max-width: 320px) {
+	aside h3 {
+		font-size: 16px;
+	}
+}
+
 
 aside h2 p {
 	text-align: right;
@@ -268,6 +284,7 @@ aside p {
 	text-align: left;
 	font-size: 13px;
 	line-height: 18px;
+	padding-left: 20px;
 }
 
 aside a {
@@ -277,33 +294,57 @@ aside a {
 
 aside a#art {
 	position: relative;
-	left: 140px;
+	left: 185px;
 	color: gray;
 }
 
 aside img {
 	height: 150px;
 	width: 200px;
+	padding-left: 20px;
 }
 
-img#authorpic {
+#authorpic {
+	width: 100%;
+}
+
+@media (max-width: 320px) {
+	#authorpic {
+		padding-left: 15px;
+}
+}
+
+#authorpic img {
 	width: 65px;
 	height: 65px;
 	border-radius: 50%;
-	margin: 50px 0 10px 25px;
+	margin: 50px 0 10px 45px;
+	padding-left: 0px;
 	position: relative;
 	left: 50px;
+}
+
+#authortext {
+	width: 100%;
 }
 
 nav#social-links {
 	text-align: center;
 	padding-bottom: 20px;
+	width: 100%
 }
 
 #social-links a {
 	color: gray;
 	font-size: 9px;
 	text-decoration: none;
+	padding: 2px;
+}
+
+@media (max-width: 320px) {
+	#social-links a {
+		font-size: 12px;
+	}
 }
 
 /* Section: Popular Posts */
@@ -351,15 +392,18 @@ section h2 {
 	text-decoration: none;
 	position: absolute;
 	margin-top: 250px;
+	width: 25%;
 	}
 
 #posts div a:hover {
  	opacity: 1;
  	color: white;
+ 	background: none;
  }
 
 #posts div a:hover > div {
- 	opactity: 1;
+ 	opacity: 1;
+ 	background: none;
  }
 
 #posts img {
@@ -370,7 +414,6 @@ section h2 {
 
 footer {
 	margin: 0;
-	bottom: 0;
 	background: #152a3e;
 	height: 80px;
 	color: lightslategray;
@@ -436,7 +479,8 @@ footer p {
 @media (max-width: 320px) {
 	footer img {
 		float: none;
-		margin: 50px;
+		margin: 80px 0 0 80px;
+		height: 50px
 	}
 }
 	
