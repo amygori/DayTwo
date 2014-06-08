@@ -201,10 +201,10 @@ div#buttons {
 
 
 a.buttons {
-	margin: 0 5px;
+	margin: 0 2px;
 	color: white;
 	font-size: 10px;
-	padding: 5px 5px 5px 0px;
+	padding: 4px 10px 5px 0px;
 }
 
 a.buttons:hover {
