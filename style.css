@@ -151,6 +151,7 @@ p.text {
 	text-align: left;
 	line-height: 20px;
 	font-size: 13px;
+	word-wrap: normal;
 }
 
 .block-quote {
@@ -200,38 +201,36 @@ div#buttons {
 
 
 a.buttons {
-	border: solid 3px white;
-	margin: 0;
+	margin: 0 5px;
 	color: white;
-	font-size: 11px;
+	font-size: 10px;
 	padding: 5px 5px 5px 0px;
-}
-
-@media (max-width: 320px) {
-	a.buttons {
-		display: none;
-	}
 }
 
 a.buttons:hover {
 	background-color: #20659d;
 }
 
+/*@media (max-width: 320px) {
+	a.buttons {
+		display: none;
+	}
+}*/
+
 .buttons i {
 	background-color: #596265;
 	padding: 5px 5px;
-}
-
-@media (max-width: 320px) {
-	.buttons i {
-		display: inline;
-	}
 }
 
 a.buttons:hover > i {
 	background-color: #162d40;
 }
 
+@media (max-width: 320px) {
+	 i > a.buttons {
+		display: none;
+	}
+}
 
 /* Sidebar */
 aside {
@@ -295,8 +294,8 @@ aside a {
 }
 
 aside a#art {
-	position: relative;
-	left: 185px;
+	display: inline;
+	margin-left: 160px;
 	color: gray;
 }
 
@@ -312,7 +311,6 @@ aside img {
 
 @media (max-width: 320px) {
 	#authorpic {
-		padding-left: 15px;
 }
 }
 
@@ -371,6 +369,14 @@ section h2 {
 	padding: 100px 0 25px 0;
 	text-align: center;
 	color: #142a3e;
+}
+
+@media (max-width: 320px) {
+	section h2 {
+		font-size: 32px;
+		padding: 25px 0;
+		width: 100%;
+	}
 }
 
 #posts {
