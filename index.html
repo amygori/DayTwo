@@ -28,23 +28,23 @@
 	 			<h2 class="main">A Fantastic Engaging Headline Goes Here</h2>
 	 			<article>
  					<img id="tinyauthorpic" class="blue-filter" src="Images/happy-dolphin.jpg" alt="Annie Dolphin">
-	 				<span class="hidden"><p id="byline"><span class="blue">Annie Dolphin</span> on </span>
+	 				<p id="byline"><span class="hidden"><a href="#">Annie Dolphin</a> on </span>
 	 					<time datetime="2014-06-07">Monday June 7 9:22 pm</time></p>
 	 					<p class="text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. </p>
-	 					<p class="text">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. </p>
+	 					<p class="text">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam <a href="3">aliquam quaerat voluptatem</a>. </p>
 	 						<p class="block-quote">"This is a pull quote from the article."</p>
 	 					<p class="text">Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. </p>
 
-	 					<p class="text">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere</p>
+	 					<p class="text">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum <a href="#">soluta nobis est eligendi optio</a> cumque nihil impedit quo minus id quod maxime placeat facere</p>
 	 			</article>
 	 				<div id="buttons">
 			 			
-			 			<a class="buttons">
-			 				<i class="fa fa-comment"></i> Read Comments</a>
-		 				<a class="buttons">
-		 					<i class="fa fa-cloud-upload"></i> Read 	Later</a>
-		 				<a class="buttons">
-		 					<i class="fa fa-share-square-o"></i> Share This Post</a>
+			 			<a href="#" class="buttons">
+			 				<i class="fa fa-comment"></i> <span class="hidden"> Read Comments</span></a>
+		 				<a href="3" class="buttons">
+		 					<i class="fa fa-cloud-upload"></i> <span class="hidden"> Read Later </span></a>
+		 				<a href="#" class="buttons">
+		 					<i class="fa fa-share-square-o"></i><span class="hidden"> Share This Post</span></a>
 	 				</div>
 	 		</section>	
 	 		<aside>
@@ -61,17 +61,17 @@
 	 						</nav>
 	 				</div>	
 	 			</div>	
-	 			<div>
-	 			<img class="blue-filter sidebar" src="Images/kayaks.jpg">
+	 			<div id="kayaks">
+	 			<img class="blue-filter sidebar" src="Images/kayaks.jpg"></div>
 	 			<a id="art" href="aboutart.com">About This Ad</a>
-	 			<h2>Sidebar Section Heading</h2>
-	 				<p>Sed ut perspiciatis unde omnis iste natus error sit 	voluptatem accusantium doloremque laudantium, totam rem 	aperiam, eaque ipsa quae ab illo inventore veritatis et 	quasi architecto beatae vitae dicta sunt explicabo. 	Nemo enim ipsam voluptatem quia voluptas sit aspernatur 	aut odit aut fugit, sed quia consequuntur magni dolores 	eos qui ratione voluptatem sequi nesciunt.  </p>
- 				</div>
+	 			<h2><span class="hidden">Sidebar Section Heading</span></h2>
+	 				<p><span class="hidden">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</span></p>
+ 				
 	 		</aside>
 	 	</div>
 		<div class="container">
 			<section>		
-			<h2>Most Popular Posts</h2>		
+			<h2 id="popular">Most Popular Posts</h2>		
 	 			<div id="posts">	
 			 			<div id="post1">
 			 				<a href="#" >Another Cool Post</a>
@@ -102,10 +102,10 @@
 				<p>The Ironyard Copyright 2014, All Rights Reserved</p>
 			
 			<ul>
-				<li>Nav Item 4 </li>
-				<li>Nav Item 3</li>
-				<li>Nav Item 2</li>
-				<li>Nav Item 1</li>
+				<li id="four">Nav Item 4</li>
+				<li id="three">Nav Item 3</li>
+				<li id="two">Nav Item 2</li>
+				<li id="one">Nav Item 1</li>
 			</ul>
 			</footer>
 		</div>
