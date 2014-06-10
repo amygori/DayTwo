@@ -1,5 +1,5 @@
 @import "reset.scss";
-@import "http://fonts.googleapis.com/css?family=Asap|Oswald|PT Sans' rel='stylesheet' type='text/css"
+@import "http://fonts.googleapis.com/css?family=Asap|Oswald|PT Sans"
 //@import "http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"
  
  //Variables
@@ -439,6 +439,7 @@ section {
 	float: left;
 	background-color: $bluefilter;
 	overflow: hidden;
+	position: relative;
 	@media (max-width: 320px) {
 		#posts div {
 			float: none;
@@ -454,7 +455,8 @@ section {
 		text-decoration: none;
 		position: relative;
 		top: 250px;
-		width: 25%;
+		position: absolute;
+		width: 100%;
 		z-index: 999;
 		@media (max-width: 320px) {
 			#posts a {
