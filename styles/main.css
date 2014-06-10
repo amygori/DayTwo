@@ -1,18 +1,21 @@
 /*
-Syntax error: Invalid CSS after "...type='text/css"": expected selector or at-rule, was "@import "http:/..."
-        on line 3 of main.scss
+Syntax error: Invalid CSS after " //Variables": expected selector or at-rule, was "$darkblue: #152..."
+        on line 6 of main.scss
 
 1: @import "reset.scss";
 2: @import "http://fonts.googleapis.com/css?family=Asap|Oswald|PT Sans' rel='stylesheet' type='text/css"
-3: @import "http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"
+3: //@import "http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"
 4:  
 5:  //Variables
 6: $darkblue: #152a3e;
 7: $bluefilter: rgba(36, 105, 159, 0.8);
 8: $header-font: 'Oswald', sans-serif;
+9: $text-font: 'Asap', sans-serif;
+10: $breakpoint: 320px;
+11: 
 
 Backtrace:
-main.scss:3
+main.scss:6
 /Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/scss/parser.rb:1312:in `expected'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/scss/parser.rb:1248:in `expected'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/scss/parser.rb:42:in `parse'
@@ -34,4 +37,4 @@ main.scss:3
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Invalid CSS after \"...type='text/css\"\": expected selector or at-rule, was \"@import \"http:/...\"\A         on line 3 of main.scss\A \A 1: @import \"reset.scss\";\A 2: @import \"http://fonts.googleapis.com/css?family=Asap|Oswald|PT Sans' rel='stylesheet' type='text/css\"\A 3: @import \"http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css\" rel=\"stylesheet\"\A 4:  \A 5:  //Variables\A 6: $darkblue: #152a3e;\A 7: $bluefilter: rgba(36, 105, 159, 0.8);\A 8: $header-font: 'Oswald', sans-serif;"; }
+  content: "Syntax error: Invalid CSS after \" //Variables\": expected selector or at-rule, was \"$darkblue: #152...\"\A         on line 6 of main.scss\A \A 1: @import \"reset.scss\";\A 2: @import \"http://fonts.googleapis.com/css?family=Asap|Oswald|PT Sans' rel='stylesheet' type='text/css\"\A 3: //@import \"http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css\" rel=\"stylesheet\"\A 4:  \A 5:  //Variables\A 6: $darkblue: #152a3e;\A 7: $bluefilter: rgba(36, 105, 159, 0.8);\A 8: $header-font: 'Oswald', sans-serif;\A 9: $text-font: 'Asap', sans-serif;\A 10: $breakpoint: 320px;\A 11: "; }

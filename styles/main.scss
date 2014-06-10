@@ -1,6 +1,6 @@
 @import "reset.scss";
 @import "http://fonts.googleapis.com/css?family=Asap|Oswald|PT Sans' rel='stylesheet' type='text/css"
-@import "http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"
+//@import "http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"
  
  //Variables
 $darkblue: #152a3e;
@@ -39,7 +39,7 @@ body {
 
 //Header 
 header {          
-	background: linear-gradient(rgba(36, 105, 159, 0.8), rgba(36, 105, 159, 0.8)), url("Images/surf_banner.jpg");
+	background: linear-gradient($bluefilter, $bluefilter), url("Images/surf_banner.jpg");
 	background-size: cover;
 	font-family: 'PT Sans', sans-serif;
 	height:380px;
@@ -320,6 +320,7 @@ aside {
 	height: 150px;
 	width: 200px;
 	padding-left: 20px;
+	background-color: transparentize($bluefilter, 50%);
 	@media (max-width: 320px) {
 		aside img {
 			height: 290px;
@@ -436,7 +437,7 @@ section {
 	div {
 	width: 25%;
 	float: left;
-	background-color: #24699f;
+	background-color: $bluefilter;
 	overflow: hidden;
 	@media (max-width: 320px) {
 		#posts div {
@@ -448,7 +449,7 @@ section {
 	a {
 		font-family: Oswald;
 		font-size: 24px;
-		color: #152a3e;
+		color: $darkblue;
 		text-transform: uppercase;
 		text-decoration: none;
 		position: relative;
@@ -498,7 +499,7 @@ section {
 
 footer {
 	margin: 0;
-	background: #152a3e;
+	background: $darkblue;
 	height: 80px;
 	color: lightslategray;
 	font-size: 13px;
