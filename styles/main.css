@@ -1,40 +1,491 @@
-/*
-Syntax error: Invalid CSS after " //Variables": expected selector or at-rule, was "$darkblue: #152..."
-        on line 6 of main.scss
-
-1: @import "reset.scss";
-2: @import "http://fonts.googleapis.com/css?family=Asap|Oswald|PT Sans' rel='stylesheet' type='text/css"
-3: //@import "http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"
-4:  
-5:  //Variables
-6: $darkblue: #152a3e;
-7: $bluefilter: rgba(36, 105, 159, 0.8);
-8: $header-font: 'Oswald', sans-serif;
-9: $text-font: 'Asap', sans-serif;
-10: $breakpoint: 320px;
-11: 
-
-Backtrace:
-main.scss:6
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/scss/parser.rb:1312:in `expected'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/scss/parser.rb:1248:in `expected'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/scss/parser.rb:42:in `parse'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/engine.rb:409:in `_to_tree'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/engine.rb:274:in `render'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/plugin/compiler.rb:378:in `update_stylesheet'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/plugin/compiler.rb:189:in `block in update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/plugin/compiler.rb:186:in `each'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/plugin/compiler.rb:186:in `update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/plugin/compiler.rb:357:in `on_file_changed'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/plugin/compiler.rb:250:in `block in watch'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/vendor/listen/lib/listen/listener.rb:252:in `call'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/vendor/listen/lib/listen/listener.rb:252:in `on_change'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/vendor/listen/lib/listen/adapters/polling.rb:48:in `call'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
 */
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Syntax error: Invalid CSS after \" //Variables\": expected selector or at-rule, was \"$darkblue: #152...\"\A         on line 6 of main.scss\A \A 1: @import \"reset.scss\";\A 2: @import \"http://fonts.googleapis.com/css?family=Asap|Oswald|PT Sans' rel='stylesheet' type='text/css\"\A 3: //@import \"http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css\" rel=\"stylesheet\"\A 4:  \A 5:  //Variables\A 6: $darkblue: #152a3e;\A 7: $bluefilter: rgba(36, 105, 159, 0.8);\A 8: $header-font: 'Oswald', sans-serif;\A 9: $text-font: 'Asap', sans-serif;\A 10: $breakpoint: 320px;\A 11: "; }
+@import "http://fonts.googleapis.com/css?family=Asap|Oswald|PT Sans";
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@media (max-width320px) {
+  .hidden {
+    display: none; } }
+.uppercase, header h1 {
+  text-transform: uppercase; }
+
+.block-quote {
+  margin: 200px;
+  border-left: solid 2px gray;
+  color: #20659c;
+  text-transform: uppercase;
+  font-size: 24px;
+  margin: 15px;
+  padding: 15px; }
+  @media (max-width: 320px) {
+    .block-quote {
+      margin: 10px 0 0 0;
+      font-size: 16px; } }
+
+body {
+  width: 100%;
+  margin: 0;
+  font-family: "Asap", sans-serif;
+  font-size: 14px; }
+
+header {
+  background-image: url("Images/surf_banner.jpg");
+  background-size: cover;
+  font-family: 'PT Sans', sans-serif;
+  height: 380px; }
+  @media (max-width: 320px) {
+    header {
+      height: 150px; } }
+  header h1 {
+    width: 100%;
+    font-size: 80px;
+    color: white;
+    padding: 160px 0 0 0;
+    margin: 0 auto;
+    text-align: center; }
+    @media (max-width: 320px) {
+      header h1 {
+        font-size: 30px;
+        padding: 10px 0px;
+        position: absolute;
+        top: 83px;
+        left: 3px; } }
+  header h2 {
+    font-family: 'Asap', sans-serif;
+    font-size: 11px;
+    width: 100%;
+    text-align: center; }
+    @media (max-width: 320px) {
+      header h2 {
+        position: absolute;
+        top: 125px;
+        left: 5px;
+        font-size: 12px; } }
+  header nav {
+    float: right;
+    text-decoration: none;
+    padding: 20px 100px 0 0;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    color: black; }
+    @media (max-width: 320px) {
+      header nav {
+        float: none;
+        text-align: center;
+        position: absolute;
+        top: 0;
+        left: 95px; } }
+  header a {
+    color: black;
+    text-decoration: none;
+    padding: 5px; }
+    header a .home {
+      font-family: 'PT Sans', sans-serif;
+      text-transform: uppercase;
+      padding: 0 10px;
+      position: relative;
+      top: 20px; }
+      @media (max-width: 320px) {
+        header a .home {
+          display: none; } }
+
+img.home {
+  padding: 10px 0 0 100px;
+  height: 30px;
+  float: left;
+  clear: left; }
+
+@media (max-width: 320px) {
+  img#logo.home {
+    float: none;
+    padding: 25px 10px 0 60px;
+    position: absolute;
+    top: 25px;
+    left: 87px; } }
+
+img#tinyauthorpic {
+  width: 40px;
+  height: 40px;
+  color: #142a3e;
+  border-radius: 50%;
+  border-radius: 50%;
+  vertical-align: middle; }
+  @media (max-width: 320px) {
+    img#tinyauthorpic {
+      display: none; } }
+
+.main {
+  width: 45%;
+  margin: 0 0 0 100px;
+  float: left; }
+  @media (max-width: 320px) {
+    .main {
+      width: 80%;
+      margin: 20px;
+      float: none; } }
+  .main h2.main {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-size: 42px;
+    margin: 0;
+    text-align: left;
+    color: #142a3e;
+    width: 100%;
+    padding-top: 50px; }
+    @media (max-width: 320px) {
+      .main h2.main {
+        font-size: 48px;
+        margin: 0px;
+        padding-top: 20px; } }
+
+article {
+  clear: both; }
+  article a {
+    color: #20659c;
+    text-decoration: none; }
+    @media (max-width: 320 px) {
+      article a {
+        margin: 10px; } }
+
+@media (max-width: 320px) {
+  time {
+    text-decoration: underline; } }
+p.text {
+  padding: 20px 0 0 0;
+  text-align: left;
+  line-height: 20px;
+  font-size: 13px;
+  word-wrap: normal; }
+
+p#byline {
+  color: gray;
+  display: inline;
+  font-size: 12px; }
+
+div#buttons {
+  clear: both;
+  padding-top: 20px; }
+
+.buttons {
+  background: #9cacb3;
+  padding: 5px 12px; }
+  @media (max-width: 320px) {
+    .buttons {
+      background: none; } }
+
+a.buttons {
+  margin: 0 2px;
+  color: white;
+  font-size: 10px;
+  padding: 4px 10px 5px 0px;
+  text-decoration: none; }
+  @media (max-width: 320px) {
+    a.buttons {
+      padding: 4px 0px 5px 0px; } }
+
+a.buttons:hover {
+  background-color: #20659d; }
+  @media (max-width: 320px) {
+    a.buttons:hover {
+      background: none; } }
+
+a.buttons:hover > i {
+  background-color: #162d40; }
+
+.buttons i {
+  background-color: #596265;
+  padding: 5px 5px; }
+  @media (max-width: 320px) {
+    .buttons i {
+      font-size: 22px; } }
+
+/* Sidebar */
+aside {
+  width: 25%;
+  float: right;
+  margin-right: 100px;
+  color: gray; }
+  @media (max-width: 320px) {
+    aside {
+      width: 100%;
+      float: none; } }
+  aside h2 {
+    font-family: "Oswald", sans-serif;
+    color: #20659c;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 25px 0 10px 20px; }
+    aside h2 p {
+      text-align: right;
+      text-decoration: none; }
+  aside h3 {
+    color: #20659c;
+    font-size: 11px;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%; }
+    @media (max-width: 320px) {
+      aside h3 {
+        font-size: 16px; } }
+  aside p {
+    text-align: left;
+    font-size: 13px;
+    line-height: 18px;
+    padding-left: 20px; }
+  aside a {
+    font-family: "Asap", sans-serif;
+    font-size: 10px; }
+  aside img {
+    height: 150px;
+    width: 200px;
+    margin-left: 20px;
+    background-color: rgba(36, 105, 159, 0.8);
+    opacity: 0.5; }
+    @media (max-width: 320px) {
+      aside img {
+        height: 290px;
+        width: auto;
+        padding-left: 15px; } }
+
+aside a#art {
+  display: inline;
+  margin-left: 160px;
+  color: gray; }
+  @media (max-width: 320px) {
+    aside a#art {
+      margin-left: 230px;
+      font-size: 12px; } }
+
+#author {
+  width: 100%;
+  margin: auto; }
+
+#authorpic {
+  width: 100%; }
+  #authorpic img {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    margin: 50px 0 10px 45px;
+    padding-left: 0px;
+    position: relative;
+    left: 50px; }
+    @media (max-width: 320px) {
+      #authorpic img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin: 50px 0px 10px 45px;
+        padding-left: 0px;
+        position: relative;
+        left: 80px; } }
+
+#authortext {
+  width: 100%; }
+
+nav#social-links {
+  text-align: center;
+  padding-bottom: 20px;
+  width: 100%; }
+
+#social-links a {
+  color: gray;
+  font-size: 9px;
+  text-decoration: none;
+  padding: 2px; }
+  @media (max-width: 320px) {
+    #social-links a {
+      font-size: 12px; } }
+
+section {
+  width: 100%; }
+  @media (max-width: 320px) {
+    section {
+      width: 91%;
+      margin: 5px;
+      padding: 10px; } }
+  section h2 {
+    text-transform: uppercase;
+    font-size: 48px;
+    clear: both;
+    background: none;
+    font-family: Oswald;
+    padding: 100px 0 25px 0;
+    text-align: center;
+    color: #142a3e; }
+
+@media (max-width: 320px) {
+  h2#popular {
+    font-size: 32px;
+    padding: 75px 0 25px 0;
+    width: 100%;
+    border-top: solid 1px lightgray; } }
+#posts {
+  width: 100%;
+  height: 300px;
+  overflow: hidden; }
+  @media (max-width: 320px) {
+    #posts {
+      height: auto; } }
+  #posts div {
+    width: 25%;
+    float: left;
+    background-color: rgba(36, 105, 159, 0.8);
+    overflow: hidden;
+    position: relative; }
+    @media (max-width: 320px) {
+      #posts div {
+        float: none;
+        width: 100%;
+        height: 300px; } }
+  #posts a {
+    font-family: Oswald;
+    font-size: 24px;
+    color: #152a3e;
+    text-transform: uppercase;
+    text-decoration: none;
+    position: relative;
+    top: 250px;
+    position: absolute;
+    width: 100%;
+    z-index: 999; }
+    @media (max-width: 320px) {
+      #posts a {
+        position: relative;
+        top: 245px;
+        left: 10px;
+        color: white; } }
+  #posts img {
+    max-width: 100%;
+    padding: 0px;
+    height: 300px;
+    opacity: 0.5;
+    position: relative; }
+    @media (max-width: 320px) {
+      #posts img {
+        max-width: 100%;
+        height: 300px; } }
+
+@media (max-width: 320px) {
+  #posts div:first-child {
+    display: none; } }
+#posts a:hover {
+  color: white; }
+
+#posts img:hover {
+  opacity: 1;
+  background: none; }
+
+footer {
+  margin: 0;
+  background: #152a3e;
+  height: 80px;
+  color: lightslategray;
+  font-size: 13px; }
+  @media (max-width: 320px) {
+    footer {
+      height: 280px;
+      position: relative;
+      top: 0px; } }
+  footer ul {
+    float: right;
+    padding: 36px;
+    margin-right: 50px;
+    color: gray; }
+    @media (max-width: 320px) {
+      footer ul {
+        float: none;
+        text-align: center;
+        left: 29px;
+        top: 25px;
+        position: relative;
+        bottom: 176px; } }
+  footer li {
+    display: inline;
+    font-size: 11px;
+    float: right;
+    text-align: right;
+    padding: 0 5px;
+    border-left: solid 1px gray; }
+    @media (max-width: 320px) {
+      footer li {
+        float: none;
+        position: relative;
+        bottom: 195px; } }
+  footer p {
+    color: gray;
+    font-size: 11px;
+    float: left;
+    vertical-align: middle;
+    padding: 36px 0 0 10px; }
+    @media (max-width: 320px) {
+      footer p {
+        float: none;
+        left: 38px;
+        text-align: center;
+        padding: 0;
+        margin: 0 85px;
+        line-height: 1.5; } }
+  footer img {
+    height: 36px;
+    padding: 20 10 20 150;
+    float: left;
+    padding: 20;
+    padding-top: 20px;
+    padding-left: 50px; }
+    @media (max-width: 320px) {
+      footer img {
+        float: none;
+        padding: 0px 0;
+        margin: 70px 0 2px 130px;
+        height: 50px; } }
+
+footer li:last-child {
+  border: none; }
+
+@media (max-width: 320px) {
+  footer li:first-child {
+    border: none; } }

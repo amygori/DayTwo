@@ -1,185 +1,32 @@
 @import "reset.scss";
-@import "http://fonts.googleapis.com/css?family=Asap|Oswald|PT Sans"
-//@import "http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"
+@import "bourbon/bourbon";
+@import "http://fonts.googleapis.com/css?family=Asap|Oswald|PT Sans";
  
- //Variables
+// Variables
 $darkblue: #152a3e;
 $bluefilter: rgba(36, 105, 159, 0.8);
 $header-font: 'Oswald', sans-serif;
 $text-font: 'Asap', sans-serif;
 $breakpoint: 320px;
+$max-width: 100%;
+$surf_banner: url("Images/surf_banner.jpg");
 
- //Mixins
 
- 
+//Mixins
+//@mixin my-linear-gradient {
+//	background: linear-gradient($bluefilter, $bluefilter), url ("Images/surf_banner.jpg");
 
 
  // Global Styles 
-.hidden {
-	display: none;
+
+@media (max-width320px) {
+	.hidden {
+		display: none;
 	}
+}
  
- .uppercase {
- 	text-transform: uppercase;
- }
-
-
-body {
-	width: 100%;
-	margin:0;
-	font-family: $text-font;
-	font-size: 14px;
-}
-
-// @media (max-width: 320px) {
-// 	.hidden {
-// 	display: none;
-// 	}
-// }
-
-//Header 
-header {          
-	background: linear-gradient($bluefilter, $bluefilter), url("Images/surf_banner.jpg");
-	background-size: cover;
-	font-family: 'PT Sans', sans-serif;
-	height:380px;
-	@media (max-width: 320px) {
-		header {height: 150px;
-		@include .hidden;
-		}
-	h1 {
-		@include .uppercase;
-		width: 100%;
-		font-size: 80px;
-		color: white;
-		padding: 160px 0 0 0;
-		margin: 0 auto;
-		text-align: center;
-		@media (max-width: 320px) {
-			header h1 {
-			font-size: 30px;
-			padding: 10px 0px;
-			position: absolute;
-			top: 83px;
-			left: 3px;
-			}
-		  }
-		}
-	h2 {
-		font-family: 'Asap', sans-serif;
-		font-size: 11px;
-		width:100%; 
-		text-align: center;
-		@media (max-width: 320px) {
-			header h2 {
-				position: absolute;
-				top: 125px;
-				left: 5px;
-				font-size: 12px;
-			}
-	nav {
-		float: right;
-		text-decoration: none;
-		padding: 20px 100px 0 0;
-		font-family: 'Oswald', sans-serif;
-		text-transform: uppercase;
-		color: black;
-		@media (max-width: 320px) {
-			header nav {
-				float: none;
-				text-align: center;
-				position: absolute;
-				top: 0;
-				left: 95px;
-		}
-	a {
-		color: black;
-		text-decoration: none;
-		padding: 5px;
-		.home {
-			font-family: 'PT Sans', sans-serif;
-			text-transform: uppercase;
-			padding: 0 10px;
-			position: relative;
-			top: 20px;
-		@media (max-width: 320px) {
-			 a.home {
-				display: none;
-			}
-		}
-}
-
-img.home {
-	padding: 10px 0 0 100px;
-	height: 30px;
-	float: left;
-	clear: left;
-}
-
-@media (max-width: 320px) {
-	img#logo.home {
-		float: none;
-		padding: 25px 10px 0 60px;
-		position: absolute;
-		top: 25px;
-		left: 87px;
-	}
-}
-//Main 
-
-.main {
-	width: 45%;
-	margin: 0 0 0 100px;
-  	float: left;
- 	@media (max-width: 320px) {
- 		.main {
- 			width: 80%;
- 			margin: 20px;
- 			float: none;
- 		}
- 	}
-	h2.main {
-		font-family: 'Oswald', sans-serif;
-		text-transform: uppercase;
-		font-size: 42px;
-		margin: 0;
-		text-align: left;
-		color: #142a3e;
-		width: 100%;
-		padding-top: 50px;
-		@media (max-width: 320px) {
-		 	h2.main {
-		 		font-size: 48px;
-		 		margin: 0px;
-		 		padding-top: 20px;
-		    }
-		}
-	}
-}
-
-article {
-	clear: both;
-	a {
-	color: #20659c;
-	text-decoration: none;
-	@media (max-width: 320 px) {
-		article {
-			margin: 10px;
-		}
-	}
-
-@media (max-width: 320px) {
-	time {
-		text-decoration: underline;
-	}
-}
-
-p.text {
-	padding: 20px 0 0 0;
-	text-align: left;
-	line-height: 20px;
-	font-size: 13px;
-	word-wrap: normal;
+.uppercase {
+	text-transform: uppercase;
 }
 
 .block-quote {
@@ -190,19 +37,105 @@ p.text {
 	font-size: 24px;
 	margin: 15px;
 	padding: 15px;
-}
-
-@media (max-width: 320px) {
-	p.block-quote {
+	@media (max-width: 320px) {
 		margin: 10px 0 0 0;
 		font-size: 16px;
 	}
 }
-p#byline {
-	color: gray;
-	display: inline;
-	font-size: 12px;
+
+
+body {
+	width: $max-width;
+	margin:0;
+	font-family: $text-font;
+	font-size: 14px;
 }
+
+//Header 
+header {          
+	background-image: $surf_banner;
+	background-size: cover;
+	font-family: 'PT Sans', sans-serif;
+	height: 380px;
+	@media (max-width: 320px) {
+		height: 150px;
+	}
+	h1 {
+		@extend .uppercase;
+		width: $max-width;
+		font-size: 80px;
+		color: white;
+		padding: 160px 0 0 0;
+		margin: 0 auto;
+		text-align: center;
+		@media (max-width: 320px) {
+			font-size: 30px;
+			padding: 10px 0px;
+			position: absolute;
+			top: 83px;
+			left: 3px; 
+		}
+	}
+	h2 {
+		font-family: 'Asap', sans-serif;
+		font-size: 11px;
+		width:$max-width; 
+		text-align: center;
+		@media (max-width: 320px) {
+			position: absolute;
+			top: 125px;
+			left: 5px;
+			font-size: 12px; 
+		}
+	}
+	nav {
+		float: right;
+		text-decoration: none;
+		padding: 20px 100px 0 0;
+		font-family: 'Oswald', sans-serif;
+		text-transform: uppercase;
+		color: black;
+		@media (max-width: 320px) {
+			float: none;
+			text-align: center;
+			position: absolute;
+			top: 0;
+			left: 95px;
+		}
+	}
+	a {
+		color: black;
+		text-decoration: none;
+		padding: 5px;
+		.home {
+			font-family: 'PT Sans', sans-serif;
+			text-transform: uppercase;
+			padding: 0 10px;
+			position: relative;
+			top: 20px;
+			@media (max-width: 320px) {
+				display: none;
+			}
+		}
+	}
+}
+
+img.home {
+	padding: 10px 0 0 100px;
+	height: 30px;
+	float: left;
+	clear: left;
+}
+
+img#logo.home {
+	@media (max-width: 320px) {
+		float: none;
+		padding: 25px 10px 0 60px;
+		position: absolute;
+		top: 25px;
+		left: 87px;
+	}
+}	
 
 img#tinyauthorpic {
 	width: 40px;
@@ -212,11 +145,72 @@ img#tinyauthorpic {
 	border-radius: 50%;
 	vertical-align: middle;
 	@media (max-width: 320px) {
-		img#tinyauthorpic{
-			display: none;
+		display: none;
+	}
+}
+
+//Main 
+
+.main {
+	width: 45%;
+	margin: 0 0 0 100px;
+  	float: left;
+ 	@media (max-width: 320px) {
+ 		width: 80%;
+ 		margin: 20px;
+ 		float: none;
+ 	}
+	h2.main {
+		font-family: 'Oswald', sans-serif;
+		text-transform: uppercase;
+		font-size: 42px;
+		margin: 0;
+		text-align: left;
+		color: #142a3e;
+		width: $max-width;
+		padding-top: 50px;
+		@media (max-width: 320px) {
+		 	font-size: 48px;
+		 	margin: 0px;
+		 	padding-top: 20px;
 		}
 	}
 }
+
+article {
+	clear: both;
+	a {
+		color: #20659c;
+		text-decoration: none;
+		@media (max-width: 320 px) {
+			margin: 10px;
+		}
+	}
+}
+
+@media (max-width: 320px) {
+	time {
+		text-decoration: underline;
+	}
+}
+
+p.text {
+		padding: 20px 0 0 0;
+		text-align: left;
+		line-height: 20px;
+		font-size: 13px;
+		word-wrap: normal;
+	}
+
+
+	//@extend .block-quote;
+p#byline {
+		color: gray;
+		display: inline;
+		font-size: 12px;
+	}
+
+
 
 div#buttons {
 	clear: both;
@@ -227,9 +221,7 @@ div#buttons {
 	background: #9cacb3;
 	padding: 5px 12px;
 	@media (max-width: 320px) {
-		.buttons {
 			background: none;
-		}
 	}
 }
 
@@ -239,22 +231,16 @@ a.buttons {
 	font-size: 10px;
 	padding: 4px 10px 5px 0px;
 	text-decoration: none;
-}
-
-@media  (max-width: 320px){
-	a.buttons {
+	@media  (max-width: 320px){
 		padding: 4px 0px 5px 0px;
-}
+	}
 }
 
 a.buttons:hover {
 	background-color: #20659d;
-}
-
-@media (max-width: 320px) {
-	a.buttons:hover {
-		background: none;
-	}
+	@media (max-width: 320px) {
+			background: none;
+		}
 }
 
 a.buttons:hover > i {
@@ -265,9 +251,7 @@ a.buttons:hover > i {
 	background-color: #596265;
 	padding: 5px 5px;
 	@media (max-width: 320px) {
-		 .buttons i {
-			font-size: 22px;
-		}
+		font-size: 22px;
 	}
 }
 
@@ -278,10 +262,8 @@ aside {
 	margin-right: 100px;
 	color: gray;
 	@media (max-width: 320px) {
-		aside {
-			width: 100%;
-			float: none;
-		}
+		width: $max-width;
+		float: none;
 	}
 	h2 {
 		font-family: "Oswald", sans-serif;
@@ -292,40 +274,38 @@ aside {
 		p {
 			text-align: right;
 			text-decoration: none;
-			}
 		}
+	}
 	h3 {
 		color: #20659c;
 		font-size: 11px;
 		text-transform: uppercase;
 		text-align: center;
-		width: 100%;
+		width: $max-width;
 		@media (max-width: 320px) {
-			aside h3 {
-				font-size: 16px;
-			}
-		}	
+			font-size: 16px;
+		}
 	}
 	p {
-	text-align: left;
-	font-size: 13px;
-	line-height: 18px;
-	padding-left: 20px;
+		text-align: left;
+		font-size: 13px;
+		line-height: 18px;
+		padding-left: 20px;
 	}
 	a {
-	font-family: "Asap", sans-serif;
-	font-size: 10px;
+		font-family: "Asap", sans-serif;
+		font-size: 10px;
 	}
 	img {
-	height: 150px;
-	width: 200px;
-	padding-left: 20px;
-	background-color: transparentize($bluefilter, 50%);
-	@media (max-width: 320px) {
-		aside img {
+		height: 150px;
+		width: 200px;
+		margin-left: 20px;
+		background-color: $bluefilter;
+		opacity:0.5;
+		@media (max-width: 320px) {
 			height: 290px;
-	    	width: auto;
-	    	padding-left: 15px;
+		    width: auto;
+		    padding-left: 15px;
 		}
 	}
 }
@@ -335,20 +315,18 @@ aside a#art {
 	margin-left: 160px;
 	color: gray;
 	@media (max-width: 320px) {
-		aside a#art {
-			margin-left: 230px;
-			font-size: 12px;
-		}
+		margin-left: 230px;
+		font-size: 12px;
 	}
 }
 
 #author {
-	width: 100%;
+	width: $max-width;
 	margin: auto;
 }
 
 #authorpic {
-	width: 100%;
+	width: $max-width;
 	img {
 		width: 65px;
 		height: 65px;
@@ -358,28 +336,26 @@ aside a#art {
 		position: relative;
 		left: 50px;
 		@media (max-width: 320px) {
-			#authorpic img {
-				width: 100px;
-				height: 100px;
-				border-radius: 50%;
-				margin: 50px 0px 10px 45px;
-				padding-left: 0px;
-				position: relative;
-				left: 80px;
-			}
+			width: 100px;
+			height: 100px;
+			border-radius: 50%;
+			margin: 50px 0px 10px 45px;
+			padding-left: 0px;
+			position: relative;
+			left: 80px;
 		}
 	}
 }
 
 
 #authortext {
-	width: 100%;
+	width: $max-width;
 }
 
 nav#social-links {
 	text-align: center;
 	padding-bottom: 20px;
-	width: 100%
+	width: $max-width;
 }
 
 #social-links a {
@@ -388,31 +364,27 @@ nav#social-links {
 	text-decoration: none;
 	padding: 2px;
 	@media (max-width: 320px) {
-		#social-links a {
-			font-size: 12px;
-		}
+		font-size: 12px;
 	}
 }
 
 //Section: Popular Posts
 section {
-	width: 100%;
+	width: $max-width;
 	@media (max-width: 320px) {
-		section {
-			width: 91%;
-			margin: 5px;
-			padding: 10px;
-		}
+		width: 91%;
+		margin: 5px;
+		padding: 10px;
 	}
 	h2 {
-	text-transform: uppercase;
-	font-size: 48px;
-	clear:both;
-	background: none;
-	font-family: Oswald;
-	padding: 100px 0 25px 0;
-	text-align: center;
-	color: #142a3e;
+		text-transform: uppercase;
+		font-size: 48px;
+		clear:both;
+		background: none;
+		font-family: Oswald;
+		padding: 100px 0 25px 0;
+		text-align: center;
+		color: #142a3e;
 	}
 }
 
@@ -420,30 +392,27 @@ section {
 	h2#popular {
 		font-size: 32px;
 		padding: 75px 0 25px 0;
-		width: 100%;
+		width: $max-width;
 		border-top: solid 1px lightgray;
 	}
 }
 
 #posts {
- 	width: 100%;
+ 	width: $max-width;
 	height: 300px;
 	overflow: hidden;
 	@media (max-width: 320px) {
-		#posts {
 			height: auto;
-		}
 	}
 	div {
-	width: 25%;
-	float: left;
-	background-color: $bluefilter;
-	overflow: hidden;
-	position: relative;
-	@media (max-width: 320px) {
-		#posts div {
+		width: 25%;
+		float: left;
+		background-color: $bluefilter;
+		overflow: hidden;
+		position: relative;
+		@media (max-width: 320px) {
 			float: none;
-			width: 100%;
+			width: $max-width;
 			height: 300px;
 		}
 	}
@@ -456,28 +425,24 @@ section {
 		position: relative;
 		top: 250px;
 		position: absolute;
-		width: 100%;
+		width: $max-width;
 		z-index: 999;
 		@media (max-width: 320px) {
-			#posts a {
 			position: relative;
 			top: 245px;
 			left: 10px;
 			color: white;
-			}
 		}
+	}	
 	img {
-		max-width: 100%;
+		max-width: $max-width;
 		padding: 0px;
 		height: 300px;
 		opacity: 0.5;
 		position: relative;
-		bottom: 25px;
 		@media (max-width: 320px) {
-			#posts img {
-				max-width: 100%;
-				height: 300px;
-			}
+			max-width: $max-width;
+			height: 300px;
 		}
 	}
 }
@@ -506,11 +471,9 @@ footer {
 	color: lightslategray;
 	font-size: 13px;
 	@media (max-width: 320px) {
-		footer {
-			height: 280px;
-			position:relative;
-			top: 0px;
-		}
+		height: 280px;
+		position:relative;
+		top: 0px;
 	}
 	ul {
 		float: right;
@@ -518,15 +481,14 @@ footer {
 		margin-right: 50px;
 		color: gray;
 		@media (max-width: 320px) {
-			footer ul {
-				float: none;
-				text-align: center;
-				left: 29px;
-				top: 25px;
-				position: relative;
-				bottom: 176px;
-			}
+			float: none;
+			text-align: center;
+			left: 29px;
+			top: 25px;
+			position: relative;
+			bottom: 176px;
 		}
+	}
 	li {
 		display: inline;
 		font-size: 11px;
@@ -535,12 +497,11 @@ footer {
 		padding: 0 5px;
 		border-left: solid 1px gray;
 		@media (max-width: 320px) {
-			footer li {
-				float: none;
-				position: relative;
-				bottom: 195px;
-			}
+			float: none;
+			position: relative;
+			bottom: 195px;
 		}
+	}
 	p {
 		color: gray;
 		font-size: 11px;
@@ -548,15 +509,14 @@ footer {
 		vertical-align: middle;
 		padding: 36px 0 0 10px;
 		@media (max-width: 320px) {
-			footer p {
-				float: none;
-				left: 38px;
-				text-align: center;
-				padding: 0;
-				margin: 0 85px;
-				line-height: 1.5;
-			}
+			float: none;
+			left: 38px;
+			text-align: center;
+			padding: 0;
+			margin: 0 85px;
+			line-height: 1.5;
 		}
+	}
 	img {
  		height: 36px;
 		padding: 20 10 20 150;
@@ -565,16 +525,13 @@ footer {
 		padding-top: 20px;
 		padding-left: 50px;
 		@media (max-width: 320px) {
-			footer img {
-				float: none;
-				padding: 0px 0;
-				margin: 70px 0 2px 130px;
-				height: 50px;
-			}
+			float: none;
+			padding: 0px 0;
+			margin: 70px 0 2px 130px;
+			height: 50px;
 		}
 	}
 }
-
 
 footer li:last-child {
 	border: none;
@@ -585,6 +542,3 @@ footer li:last-child {
 		border: none;
 	}
 }
-
-
-	
